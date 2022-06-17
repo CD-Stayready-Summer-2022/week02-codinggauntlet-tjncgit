@@ -14,10 +14,16 @@ public class Problem {
        stringCopies("Hi", 3) --> "HiHiHi"
        stringCopies("Hi", 1) --> "Hi"
      */
-
+    public static void main(String[] args) {
+        System.out.println(stringCopies("Hi", 2));
+        System.out.println("followed x is" + followedX("axxbb"));
+    }
     public static String stringCopies(String word, int n) {
-
-        return null;
+        String output = word;
+        for (int i = 0; i < n - 1 ; i++) {
+            output += word;
+        }
+        return output;
     }
 
 
@@ -31,9 +37,18 @@ public class Problem {
     followedX("xxxxx") --> true
      */
 
-    public static Boolean followedX(String str) {
-
-        return null;
+    public static Boolean followedX(String str) {;
+        int length = str.length();
+        String[] strArray = str.split("");
+        int count = 0;
+        for (int i = 0; i < length -1; i++) {
+            if(strArray[i] == "x") {
+                if(strArray[i+1] == "x") {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
 
@@ -70,8 +85,12 @@ public class Problem {
      */
 
     public static Boolean basicNumbers123(int[] nums) {
-
-        return null;
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (nums[i] == 1 && nums[i] == 2 && nums[i] == 3) {
+                return true;
+            }
+        }
+        return false;
     }
 
 
@@ -90,7 +109,6 @@ public class Problem {
      */
 
     public static String scrambleOfLetters(String scramble) {
-
         return null;
     }
 
